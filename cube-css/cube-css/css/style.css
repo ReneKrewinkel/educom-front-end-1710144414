@@ -1,0 +1,152 @@
+@import url("styles.css");
+/* CSS: Set the stage */
+body {
+    font-family: var(--main-font);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-base);
+    color: var(--color-dark);
+    background: var(--color-base);
+   
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+   
+/* Composition */
+/* select every sibling of flow EXCEPT the first one */
+.flow > * + * {
+    margin-top: 1em;
+}
+
+/* Or with grid */
+.grid-flow {
+    display: grid;
+    gap: 2em;
+}
+
+
+
+/* ... */
+
+/* Utility */
+/* padding */
+.padding-small {
+    padding: var(--padding-s);
+}
+.padding-medium {
+    padding: var(--padding-m);
+}
+
+.padding-extra-large {
+    padding: var(--padding-xl);
+}
+
+
+/** ... **/
+
+
+/* text color */
+.text-dark {
+    color: var(--color-dark);
+  }
+  
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+/* text align */
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/* background */
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+/* border radius */
+.border-radius-full {
+    border-radius: 25px;
+}
+
+.border-radius-top {
+    border-radius: 25px 25px 0 0;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.45);
+}
+
+/* Flexies */
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+
+/** ... **/
+/* BLOCK */
+
+.card {
+    max-width: 30rem;
+    overflow-y: hidden; /* so we have a rounded image as well! */
+  }
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.button {
+    cursor: pointer;
+    color: var(--color-dark);
+    text-decoration: none;
+    border: 0;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-bold);
+    padding: 0.75em 1.5em;
+    transition: all 0.3s ease;
+}
+  
+.button[data-button-type="button-primary"] {
+      color: var(--color-white);
+      background: var(--color-primary);
+}
+  
+.button:focus,
+.button[data-button-type="button-primary"]:hover {
+      background-color: var(--color-primary-darker);
+      color: var(--color-white);
+}
